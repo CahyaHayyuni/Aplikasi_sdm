@@ -13,7 +13,7 @@
                                 <th>No</th>
                                 <th>Nip</th>
                                 <th>Nama</th>
-                                <th>Tempat Lahir</th>
+                                <th>Tempat tinggal</th>
                                 <th>Tanggal Lahir</th>
                                 <th>Jenis Kelamin </th>
                                 <th>Divisi</th>
