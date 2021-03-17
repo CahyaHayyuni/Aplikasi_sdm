@@ -10,7 +10,7 @@
                     <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                         <thead>
                             <tr>
-                                <th>No</th>
+                                <th>Nomer</th>
                                 <th>Nip</th>
                                 <th>Nama</th>
                                 <th>Tempat Lahir</th>
