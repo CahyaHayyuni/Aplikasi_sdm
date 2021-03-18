@@ -89,7 +89,7 @@ if (isset($_POST['simpan'])) {
     $nama = $pecah_nama[1];
 
     //cek jumlah buku testing
-    $sql = $koneksi->query("select * from tb_buku where judul = '$judul'");
+    $sql = $koneksi->query("select * from tb_barang where judul = '$judul'");
     while ($data = $sql->fetch_assoc()) {
         $sisa = $data['jumlah_buku'];
 
