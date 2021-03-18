@@ -42,7 +42,8 @@ if ($_SESSION['admin'] || $_SESSION['user']) {
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">Aplikasi SDM</a>
+                    <a class="navbar-brand" href="index.html">IMAN</a>
+                    <h3 style="color: white; background-color: #A70303" ;> Inventory Management </h3>
                 </div>
                 <div style="color: white;
 padding: 15px 50px 5px 50px;
