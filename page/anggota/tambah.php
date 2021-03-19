@@ -46,7 +46,14 @@
                         <label>Divisi</label>
                         <select class="form-control" name="divisi">
                             <option value="it">Informasi Teknologi</option>
-                            <option value="t">Teknik</option>
+                            <option value="tnk">Teknik</option>
+                            <option value="kom">Komersial</option>
+                            <option value="keu">Keuangan</option>
+                            <option value="qrm">Menegement Resiko & Mutu</option>
+                            <option value="tpkb">TPKB</option>
+                            <option value="trs">Trisakti</option>
+                            <option value="hsse">HSSE</option>
+                            <option value="umujm">SDM & Umum</option>
                             ?>
                         </select>
                     </div>

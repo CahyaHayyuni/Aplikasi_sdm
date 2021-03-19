@@ -32,7 +32,7 @@
 
                                 $jk = ($data['jk'] == 'l') ? "Laki-laki" : "Perempuan";
 
-                                $divisi = ($data['divisi'] == 'it') ? "Informasi Teknologi" : "Teknik";
+                                $divisi = convert_divisi($data['divisi']);
                             ?>
 
                                 <tr>

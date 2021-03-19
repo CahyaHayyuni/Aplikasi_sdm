@@ -26,7 +26,7 @@ $divisi = $tampil['divisi'];
 
                     <div class="form-group">
                         <label>Nama</label>
-                        <input class="form-control" name="nama" value="<?php echo $tampil['nama'] ?>" />
+                        <input class="form-control" name="nama" value="<?php echo $tampil['nama'] ?>" readonly />
 
                     </div>
 
@@ -51,9 +51,33 @@ $divisi = $tampil['divisi'];
                     <div class="form-group">
                         <label>Divisi</label>
                         <select class="form-control" name="divisi">
-                            <option value="it">Informasi Teknologi</option>
-                            <option value="t">Teknik</option>
-
+                            <option value="it" <?php if ($divisi == 'it') {
+                                                    echo "selected";
+                                                } ?>>Informasi Teknologi</option>
+                            <option value="tnk" <?php if ($divisi == 'tnk') {
+                                                    echo "selected";
+                                                } ?>>Teknik</option>
+                            <option value="kom" <?php if ($divisi == 'kom') {
+                                                    echo "selected";
+                                                } ?>>Komersial</option>
+                            <option value="keu" <?php if ($divisi == 'keu') {
+                                                    echo "selected";
+                                                } ?>>Keuangan</option>
+                            <option value="qrm" <?php if ($divisi == 'qrm') {
+                                                    echo "selected";
+                                                } ?>>Menegement Resiko & Mutu</option>
+                            <option value="tpkb" <?php if ($divisi == 'tpkb') {
+                                                        echo "selected";
+                                                    } ?>>TPKB</option>
+                            <option value="trs" <?php if ($divisi == 'trs') {
+                                                    echo "selected";
+                                                } ?>>Trisakti</option>
+                            <option value="hsse" <?php if ($divisi == 'hsse') {
+                                                        echo "selected";
+                                                    } ?>>HSSE</option>
+                            <option value="umum" <?php if ($divisi == 'umum') {
+                                                        echo "selected";
+                                                    } ?>>SDM & Umum</option>
                         </select>
                     </div>
 

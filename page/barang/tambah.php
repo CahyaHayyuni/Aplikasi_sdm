@@ -7,15 +7,19 @@
             <div class="col-md-6">
 
                 <form method="POST">
-                    <div class="form-group">
-                        <label>Nip</label>
-                        <input class="form-control" name="nip" />
-
-                    </div>
 
                     <div class="form-group">
-                        <label>Nama</label>
-                        <input class="form-control" name="nama" />
+                        <label>Nama/NIP</label>
+                        <select class="form-control" name="nama">
+                            <?php
+
+                            $sql = $koneksi->query("select * from tb_anggota order by nip");
+
+                            while ($data = $sql->fetch_assoc()) {
+                                echo "<option value='$data[nip].$data[nama]'>$data[nip] | $data[nama]</option>";
+                            }
+                            ?>
+                        </select>
 
                     </div>
 
@@ -40,8 +44,15 @@
                     <div class="form-group">
                         <label>Divisi</label>
                         <select class="form-control" name="divisi">
-                            <option value="it">Informasin Teknologi</option>
-                            <option value="t">Teknik</option>
+                            <option value="it">Informasi Teknologi</option>
+                            <option value="tnk">Teknik</option>
+                            <option value="kom">Komersial</option>
+                            <option value="keu">Keuangan</option>
+                            <option value="qrm">Menegement Resiko & Mutu</option>
+                            <option value="tpkb">TPKB</option>
+                            <option value="trs">Trisakti</option>
+                            <option value="hsse">HSSE</option>
+                            <option value="umujm">SDM & Umum</option>
 
                         </select>
                     </div>
@@ -59,8 +70,10 @@
 
 <?php
 
-$nip = isset($_POST['nip']) ? $_POST['nip'] : '';
-$nama = isset($_POST['nama']) ? $_POST['nama'] : '';
+$nama = $_POST['nama'] ? $_POST['nama'] : '';
+$pecah_nama = explode(".", $nama);
+$nip = $pecah_nama[0];
+$nama = $pecah_nama[1];
 $barang = isset($_POST['barang']) ? $_POST['barang'] : '';
 $pengirim = isset($_POST['pengirim']) ? $_POST['pengirim'] : '';
 $tgl_datang = isset($_POST['tgl_datang']) ? $_POST['tgl_datang'] : '';
