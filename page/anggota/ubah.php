@@ -83,8 +83,7 @@ $divisi = $tampil['divisi'];
 $nip = isset($_POST['nip']) ? $_POST['nip'] : '';
 $nama = isset($_POST['nama']) ? $_POST['nama'] : '';
 $tmpt_lahir = isset($_POST['tmpt_lahir']) ? $_POST['tmpt_lahir'] : '';
-$originalDate = isset($_POST['tgl_lahir']) ? $_POST['tgl_lahir'] : '';
-$tgl_lahir = date("Y-m-d", strtotime($originalDate));
+$tgl_lahir = isset($_POST['tgl_lahir']) ? $_POST['tgl_lahir'] : '';
 $jk = isset($_POST['jk']) ? $_POST['jk'] : '';
 $divisi = isset($_POST['divisi']) ? $_POST['divisi'] : '';
 

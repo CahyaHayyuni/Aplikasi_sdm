@@ -63,8 +63,7 @@ $nip = isset($_POST['nip']) ? $_POST['nip'] : '';
 $nama = isset($_POST['nama']) ? $_POST['nama'] : '';
 $barang = isset($_POST['barang']) ? $_POST['barang'] : '';
 $pengirim = isset($_POST['pengirim']) ? $_POST['pengirim'] : '';
-$originalDate = isset($_POST['tgl_datang']) ? $_POST['tgl_datang'] : '';
-$tgl_datang = date("Y-m-d", strtotime(str_replace('/', '-', $originalDate)));
+$tgl_datang = isset($_POST['tgl_datang']) ? $_POST['tgl_datang'] : '';
 $divisi = isset($_POST['divisi']) ? $_POST['divisi'] : '';
 
 $simpan = isset($_POST['simpan']) ? $_POST['simpan'] : '';
