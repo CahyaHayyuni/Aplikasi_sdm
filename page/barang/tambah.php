@@ -33,7 +33,7 @@
 
                     <div class="form-group">
                         <label>Tanggal Datang</label>
-                        <input class="form-control" name="tanggal" type="date" />
+                        <input class="form-control" name="tgl_datang" type="date" />
 
                     </div>
 
