@@ -75,7 +75,7 @@ $simpan = isset($_POST['simpan']) ? $_POST['simpan'] : '';
 
 if ($simpan) {
     //echo $simpan;
-    $sql = $koneksi->query("insert into tb_anggota (nip, nama, tempat_lahir, tgl_lahir, jk, divisi)values('$nip', '$nama', '$tmpt_lahir', '$tgl_lahir', '$jk', '$divisi')");
+    $sql = $koneksi->query("insert into tb_anggota (nip, nama, tempat_lahir, tgl_lahir, jk, divisi)value('$nip', '$nama', '$tmpt_lahir', '$tgl_lahir', '$jk', '$divisi')");
     //echo $sql;
     if ($sql) {
 ?>
