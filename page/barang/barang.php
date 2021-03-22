@@ -28,11 +28,11 @@
 
                             $no = 1;
 
-                            $sql = $koneksi->query("select * from tb_barang order by id desc");
+                            $sql = $koneksi->query("select * from tb_barang");
 
                             while ($data = $sql->fetch_assoc()) {
 
-                                $divisi = convert_divisi($data['divisi']);
+
                             ?>
 
                                 </tr>
@@ -42,7 +42,7 @@
                                 <td><?php echo $data['barang']; ?></td>
                                 <td><?php echo $data['pengirim']; ?></td>
                                 <td><?php echo $data['tgl_datang']; ?></td>
-                                <td><?php echo $divisi; ?></td>
+                                <td><?php echo $data['divisi']; ?></td>
                                 <td>
                                     <a href="?page=barang&surat&aksi=ubah&id=<?php echo $data['id']; ?>" class="btn btn-info">Ubah</a>
                                     <a onclick="return confirm('Anda Yakin Menghapus Data Ini?')" href="?page=barang&surat&aksi=hapus&id=<?php echo $data['id']; ?>" class="btn btn-danger">Hapus</a>

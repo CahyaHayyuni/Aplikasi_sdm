@@ -1,28 +1,23 @@
 <?php
 
-function convert_divisi($id_divisi)
+function terlambat($tgl_dateline, $tgl_kembali)
 {
-    $divisi = "";
 
-    if ($id_divisi == 'it') {
-        $divisi = "Informasi Teknologi";
-    } elseif ($id_divisi == 'tnk') {
-        $divisi = "Teknik";
-    } elseif ($id_divisi == 'kom') {
-        $divisi = "Komersial";
-    } elseif ($id_divisi == 'keu') {
-        $divisi = "Keuangan";
-    } elseif ($id_divisi == 'qrm') {
-        $divisi = "Menegement Resiko & Mutu";
-    } elseif ($id_divisi == 'tpkb') {
-        $divisi = "TPKB";
-    } elseif ($id_divisi == 'trs') {
-        $divisi = "Trisakti";
-    } elseif ($id_divisi == 'hsse') {
-        $divisi = "HSSE";
-    } elseif ($id_divisi == 'umum') {
-        $divisi = "SDM & Umum";
+    $tgl_dateline = explode("-", $tgl_dateline);
+    $tgl_dateline_pecah = $tgl_dateline[0] . "-" . $tgl_dateline[1] . "-" . $tgl_dateline[2];
+
+    $tgl_kembali = explode("-", $tgl_kembali);
+    $tgl_kembali_pecah = $tgl_kembali[0] . "-" . $tgl_kembali[1] . "-" . $tgl_kembali[2];
+
+    $selisih = strtotime($tgl_kembali_pecah) - strtotime($tgl_dateline_pecah);
+
+    $selisih = $selisih / 86400;
+
+    if ($selisih >= 1) {
+        $hasi_tgl = floor($selisih);
+    } else {
+        $hasi_tgl = 0;
     }
 
-    return $divisi;
+    return $hasi_tgl;
 }
