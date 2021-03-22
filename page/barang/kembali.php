@@ -11,7 +11,7 @@ $divisi = $tampil['divisi'];
 
 <div class="panel panel-default">
     <div class="panel-heading">
-        Ubah Data
+        Kembali
     </div>
     <div class="panel-body">
         <div class="row">
@@ -44,19 +44,18 @@ $divisi = $tampil['divisi'];
 
                     <div class="form-group">
                         <label>Tanggal Datang</label>
-                        <input class="form-control" name="tanggal" type="date" value="<?php echo $tampil['tgl_datang'] ?>" readonly />
+                        <input class="form-control" name="tgl_datang" type="date" value="<?php echo $tampil['tgl_datang'] ?>" readonly />
 
                     </div>
 
                     <div class="form-group">
                         <label>Tanggal Kembali</label>
-                        <input class="form-control" name="tanggal" type="date" value="<?php echo $tampil['tgl_kembali'] ?>" />
+                        <input class="form-control" name="tgl_kembali" type="date" />
 
                     </div>
 
                     <div class="form-group">
                         <label>Divisi</label>
-<<<<<<< HEAD:page/barang/kembali.php
                         <select class="form-control" name="divisi" readonly>
                             <option value="it" <?php if ($divisi == 'it') {
                                                     echo "selected";
@@ -85,12 +84,6 @@ $divisi = $tampil['divisi'];
                             <option value="umum" <?php if ($divisi == 'umum') {
                                                         echo "selected";
                                                     } ?>>SDM & Umum</option>
-=======
-                        <select class="form-control" name="divisi">
-                            <option value="it">Informasi Teknologi</option>
-                            <option value="t">Teknik</option>
-
->>>>>>> d3a2c8e0f65e209d3470badef6da8e488261d7f3:page/barang/ubah.php
                         </select>
                     </div>
 
@@ -115,7 +108,7 @@ $nama = isset($_POST['nama']) ? $_POST['nama'] : '';
 $barang = isset($_POST['barang']) ? $_POST['barang'] : '';
 $pengirim = isset($_POST['pengirim']) ? $_POST['pengirim'] : '';
 $tgl_datang = isset($_POST['tgl_datang']) ? $_POST['tgl_datang'] : '';
-$tgl_kembali = isset($_POST['tgl_kembali']) ? $_POST['tgl_datang'] : '';
+$tgl_kembali = isset($_POST['tgl_kembali']) ? $_POST['tgl_kembali'] : '';
 $divisi = isset($_POST['divisi']) ? $_POST['divisi'] : '';
 
 $simpan = isset($_POST['simpan']) ? $_POST['simpan'] : '';
