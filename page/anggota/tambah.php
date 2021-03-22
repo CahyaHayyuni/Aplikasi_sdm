@@ -46,6 +46,7 @@
                         <label>Divisi</label>
                         <select class="form-control" name="divisi">
                             <option value="it">Informasi Teknologi</option>
+<<<<<<< HEAD
                             <option value="tnk">Teknik</option>
                             <option value="kom">Komersial</option>
                             <option value="keu">Keuangan</option>
@@ -54,6 +55,9 @@
                             <option value="trs">Trisakti</option>
                             <option value="hsse">HSSE</option>
                             <option value="umum">SDM & Umum</option>
+=======
+                            <option value="t">Teknik</option>
+>>>>>>> d3a2c8e0f65e209d3470badef6da8e488261d7f3
                             ?>
                         </select>
                     </div>
@@ -82,7 +86,7 @@ $simpan = isset($_POST['simpan']) ? $_POST['simpan'] : '';
 
 if ($simpan) {
     //echo $simpan;
-    $sql = $koneksi->query("insert into tb_anggota (nip, nama, tempat_lahir, tgl_lahir, jk, divisi)values('$nip', '$nama', '$tmpt_lahir', '$tgl_lahir', '$jk', '$divisi')");
+    $sql = $koneksi->query("insert into tb_anggota (nip, nama, tempat_lahir, tgl_lahir, jk, divisi)value('$nip', '$nama', '$tmpt_lahir', '$tgl_lahir', '$jk', '$divisi')");
     //echo $sql;
     if ($sql) {
 ?>

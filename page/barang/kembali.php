@@ -26,7 +26,7 @@ $divisi = $tampil['divisi'];
 
                     <div class="form-group">
                         <label>Nama</label>
-                        <input class="form-control" name="nama" value="<?php echo $tampil['nama'] ?>" readonly />
+                        <input class="form-control" name="nama" value="<?php echo $tampil['nama'] ?>" />
 
                     </div>
 
@@ -56,6 +56,7 @@ $divisi = $tampil['divisi'];
 
                     <div class="form-group">
                         <label>Divisi</label>
+<<<<<<< HEAD:page/barang/kembali.php
                         <select class="form-control" name="divisi" readonly>
                             <option value="it" <?php if ($divisi == 'it') {
                                                     echo "selected";
@@ -84,6 +85,12 @@ $divisi = $tampil['divisi'];
                             <option value="umum" <?php if ($divisi == 'umum') {
                                                         echo "selected";
                                                     } ?>>SDM & Umum</option>
+=======
+                        <select class="form-control" name="divisi">
+                            <option value="it">Informasi Teknologi</option>
+                            <option value="t">Teknik</option>
+
+>>>>>>> d3a2c8e0f65e209d3470badef6da8e488261d7f3:page/barang/ubah.php
                         </select>
                     </div>
 
