@@ -52,7 +52,7 @@
                             <option value="tpkb">TPKB</option>
                             <option value="trs">Trisakti</option>
                             <option value="hsse">HSSE</option>
-                            <option value="umujm">SDM & Umum</option>
+                            <option value="umum">SDM & Umum</option>
 
                         </select>
                     </div>

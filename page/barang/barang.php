@@ -44,7 +44,7 @@
                                 <td><?php echo $data['tgl_datang']; ?></td>
                                 <td><?php echo $divisi; ?></td>
                                 <td>
-                                    <a href="?page=barang&surat&aksi=ubah&id=<?php echo $data['id']; ?>" class="btn btn-info">Ubah</a>
+                                    <a href="?page=barang&surat&aksi=ubah&id=<?php echo $data['id']; ?>" class="btn btn-info">Kembali</a>
                                     <a onclick="return confirm('Anda Yakin Menghapus Data Ini?')" href="?page=barang&surat&aksi=hapus&id=<?php echo $data['id']; ?>" class="btn btn-danger">Hapus</a>
 
                                 </td>

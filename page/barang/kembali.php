@@ -32,25 +32,31 @@ $divisi = $tampil['divisi'];
 
                     <div class="form-group">
                         <label>Barang</label>
-                        <input class="form-control" name="barang" value="<?php echo $tampil['barang'] ?>" />
+                        <input class="form-control" name="barang" value="<?php echo $tampil['barang'] ?>" readonly />
 
                     </div>
 
                     <div class="form-group">
                         <label>Pengirim</label>
-                        <input class="form-control" name="pengirim" value="<?php echo $tampil['pengirim'] ?>" />
+                        <input class="form-control" name="pengirim" value="<?php echo $tampil['pengirim'] ?>" readonly />
 
                     </div>
 
                     <div class="form-group">
                         <label>Tanggal Datang</label>
-                        <input class="form-control" name="tanggal" type="date" value="<?php echo $tampil['tgl_datang'] ?>" />
+                        <input class="form-control" name="tanggal" type="date" value="<?php echo $tampil['tgl_datang'] ?>" readonly />
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tanggal Kembali</label>
+                        <input class="form-control" name="tanggal" type="date" value="<?php echo $tampil['tgl_kembali'] ?>" />
 
                     </div>
 
                     <div class="form-group">
                         <label>Divisi</label>
-                        <select class="form-control" name="divisi">
+                        <select class="form-control" name="divisi" readonly>
                             <option value="it" <?php if ($divisi == 'it') {
                                                     echo "selected";
                                                 } ?>>Informasi Teknologi</option>
@@ -96,11 +102,13 @@ $divisi = $tampil['divisi'];
 
 <?php
 
+$id = isset($_POST['id']) ? $_POST['id'] : '';
 $nip = isset($_POST['nip']) ? $_POST['nip'] : '';
 $nama = isset($_POST['nama']) ? $_POST['nama'] : '';
 $barang = isset($_POST['barang']) ? $_POST['barang'] : '';
 $pengirim = isset($_POST['pengirim']) ? $_POST['pengirim'] : '';
 $tgl_datang = isset($_POST['tgl_datang']) ? $_POST['tgl_datang'] : '';
+$tgl_kembali = isset($_POST['tgl_kembali']) ? $_POST['tgl_datang'] : '';
 $divisi = isset($_POST['divisi']) ? $_POST['divisi'] : '';
 
 $simpan = isset($_POST['simpan']) ? $_POST['simpan'] : '';
@@ -108,8 +116,8 @@ $simpan = isset($_POST['simpan']) ? $_POST['simpan'] : '';
 if ($simpan) {
 
 
-    $sql = $koneksi->query("update tb_barang set nip='$nip', nama='$nama', barang='$barang',
-      pengirim='$pengirim', tgl_datang='$tgl_datang', divisi='$divisi' where id='$id'");
+    $sql = $koneksi->query("insert into tb_histori (id, nip, nama, barang, pengirim, tgl_datang, tgl_kembali, divisi)value('$id', '$nip', '$nama', '$barang', '$pengirim', '$tgl_datang', '$tgl_kembali', '$divisi')");
+    $koneksi->query("delete from tb_barang where id ='$id'");
 
     if ($sql) {
 ?>

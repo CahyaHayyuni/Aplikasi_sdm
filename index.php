@@ -100,8 +100,8 @@ font-size: 16px;"><?php echo date('d-m-Y'); ?> &nbsp; <a href="logout.php" class
                                     include "page/barang/barang.php";
                                 } elseif ($aksi == "tambah") {
                                     include "page/barang/tambah.php";
-                                } elseif ($aksi == "ubah") {
-                                    include "page/barang/ubah.php";
+                                } elseif ($aksi == "kembali") {
+                                    include "page/barang/kembali.php";
                                 } elseif ($aksi == "hapus") {
                                     include "page/barang/hapus.php";
                                 }
