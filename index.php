@@ -70,12 +70,12 @@ font-size: 16px;"><?php echo date('d-m-Y'); ?> &nbsp; <a href="logout.php" class
 
 
                         <li>
-                            <a href="?page=barang&surat"><i class="fa fa-book fa-3x"></i> Data Barang & Surat</a>
+                            <a href="?page=barang&surat"><i class="fa fa-book fa-3x"></i> Transaksi Barang & Surat</a>
                         </li>
 
 
                         <li>
-                            <a href="?page=transaksi"><i class="fa fa-edit fa-3x"></i> Transaksi</a>
+                            <a href="?page=histori"><i class="fa fa-edit fa-3x"></i> Histori Barang & Surat</a>
                         </li>
 
                     </ul>
@@ -115,15 +115,9 @@ font-size: 16px;"><?php echo date('d-m-Y'); ?> &nbsp; <a href="logout.php" class
                                 } elseif ($aksi == "hapus") {
                                     include "page/anggota/hapus.php";
                                 }
-                            } elseif ($page == "transaksi") {
+                            } elseif ($page == "histori") {
                                 if ($aksi == "") {
-                                    include "page/transaksi/transaksi.php";
-                                } elseif ($aksi == "tambah") {
-                                    include "page/transaksi/tambah.php";
-                                } elseif ($aksi == "kembali") {
-                                    include "page/transaksi/kembali.php";
-                                } elseif ($aksi == "perpanjang") {
-                                    include "page/transaksi/perpanjang.php";
+                                    include "page/histori/histori.php";
                                 }
                             } elseif ($page == "") {
 
