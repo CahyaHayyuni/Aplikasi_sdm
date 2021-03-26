@@ -83,6 +83,12 @@ font-size: 16px;"><?php echo date('d-m-Y'); ?> &nbsp; <a href="logout.php" class
                             <a href="?page=histori"><i class="fa fa-edit fa-3x"></i> Histori Barang & Surat</a>
                         </li>
 
+
+                        <li>
+                            <a href="?page=histori"><i class="fa fa-edit fa-3x"></i> Histori Barang & Surat</a>
+                        </li>
+
+
                     </ul>
 
                 </div>
