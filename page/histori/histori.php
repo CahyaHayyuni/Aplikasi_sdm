@@ -18,6 +18,7 @@
                                 <th>Tanggal Datang</th>
                                 <th>Tanggal Kembali</th>
                                 <th>Divisi</th>
+                                <th>Keterangan</th>
                             </tr>
                         </thead>
                         <tbody>
