@@ -66,11 +66,12 @@
 
 <?php
 
-$nip = isset($_POST['nip']) ? $_POST['nip'] : '';
 $nama = isset($_POST['nama']) ? $_POST['nama'] : '';
-$pecah_nama = explode(".", $nama);
-$nip = $pecah_nama[0];
-$nama = $pecah_nama[1];
+if (isset($_POST['nama'])) {
+    $pecah_nama = explode(".", $nama);
+    $nip = $pecah_nama[0];
+    $nama = $pecah_nama[1];
+}
 $barang = isset($_POST['barang']) ? $_POST['barang'] : '';
 $pengirim = isset($_POST['pengirim']) ? $_POST['pengirim'] : '';
 $tgl_datang = isset($_POST['tgl_datang']) ? $_POST['tgl_datang'] : '';

@@ -116,7 +116,6 @@ $pengirim = isset($_POST['pengirim']) ? $_POST['pengirim'] : '';
 $penerima = isset($_POST['penerima']) ? $_POST['penerima'] : '';
 $tgl_datang = isset($_POST['tgl_datang']) ? $_POST['tgl_datang'] : '';
 $tgl_kembali = isset($_POST['tgl_kembali']) ? $_POST['tgl_kembali'] : '';
-
 $simpan = isset($_POST['simpan']) ? $_POST['simpan'] : '';
 
 if ($simpan) {

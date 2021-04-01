@@ -15,6 +15,7 @@
                                 <th>Nama</th>
                                 <th>Barang</th>
                                 <th>Pengirim</th>
+                                <th>Penerima</th>
                                 <th>Tanggal Datang</th>
                                 <th>Tanggal Kembali</th>
                                 <th>Divisi</th>
@@ -39,6 +40,7 @@
                                 <td><?php echo $data['nama']; ?></td>
                                 <td><?php echo $data['barang']; ?></td>
                                 <td><?php echo $data['pengirim']; ?></td>
+                                <td><?php echo $data['penerima']; ?></td>
                                 <td><?php echo $data['tgl_datang']; ?></td>
                                 <td><?php echo $data['tgl_kembali']; ?></td>
                                 <td><?php echo $divisi; ?></td>

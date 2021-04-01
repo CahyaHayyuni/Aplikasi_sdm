@@ -70,12 +70,12 @@ font-size: 16px;"><?php echo date('d-m-Y'); ?> &nbsp; <a href="logout.php" class
 
 
                         <li>
-                            <a href="?page=barang"><i class="fa fa-book fa-3x"></i> Transaksi Masuk Barang & Surat</a>
+                            <a href="?page=barang"><i class="fa fa-book fa-3x"></i> Transaksi Barang & Surat Masuk</a>
                         </li>
 
 
                         <li>
-                            <a href="?page=barang"><i class="fa fa-book fa-3x"></i> Transaksi Keluar Barang & Surat</a>
+                            <a href="?page=barang"><i class="fa fa-book fa-3x"></i> Transaksi Barang & Surat Keluar</a>
                         </li>
 
 
