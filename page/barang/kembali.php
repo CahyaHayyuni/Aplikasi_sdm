@@ -26,7 +26,7 @@ $divisi = $tampil['divisi'];
 
                     <div class="form-group">
                         <label>Nama</label>
-                        <input class="form-control" name="nama" value="<?php echo $tampil['nama'] ?>" />
+                        <input class="form-control" name="nama" value="<?php echo $tampil['nama'] ?>" readonly />
 
                     </div>
 
@@ -39,6 +39,12 @@ $divisi = $tampil['divisi'];
                     <div class="form-group">
                         <label>Pengirim</label>
                         <input class="form-control" name="pengirim" value="<?php echo $tampil['pengirim'] ?>" readonly />
+
+                    </div>
+
+                    <div class="form-group">
+                        <label>Penerima</label>
+                        <input class="form-control" name="penerima" value="<?php echo $tampil['penerima'] ?>" />
 
                     </div>
 
@@ -107,6 +113,7 @@ $nip = isset($_POST['nip']) ? $_POST['nip'] : '';
 $nama = isset($_POST['nama']) ? $_POST['nama'] : '';
 $barang = isset($_POST['barang']) ? $_POST['barang'] : '';
 $pengirim = isset($_POST['pengirim']) ? $_POST['pengirim'] : '';
+$penerima = isset($_POST['penerima']) ? $_POST['penerima'] : '';
 $tgl_datang = isset($_POST['tgl_datang']) ? $_POST['tgl_datang'] : '';
 $tgl_kembali = isset($_POST['tgl_kembali']) ? $_POST['tgl_kembali'] : '';
 
@@ -115,7 +122,7 @@ $simpan = isset($_POST['simpan']) ? $_POST['simpan'] : '';
 if ($simpan) {
 
 
-    $sql = $koneksi->query("insert into tb_histori (id, nip, nama, barang, pengirim, tgl_datang, tgl_kembali, divisi)value('$id', '$nip', '$nama', '$barang', '$pengirim', '$tgl_datang', '$tgl_kembali', '$divisi')");
+    $sql = $koneksi->query("insert into tb_histori (id, nip, nama, barang, pengirim, penerima, tgl_datang, tgl_kembali, divisi)value('$id', '$nip', '$nama', '$barang', '$pengirim', '$penerima', '$tgl_datang', '$tgl_kembali', '$divisi')");
     $koneksi->query("delete from tb_barang where id ='$id'");
 
     if ($sql) {
